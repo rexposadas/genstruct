@@ -1,15 +1,7 @@
 package main
 
-import (
-	"log"
-	"os"
-)
+import "github.com/rexposadas/genstruct/cmd"
 
 func main() {
-	source, err := os.Open("person.rx")
-	if err != nil {
-		log.Fatalf("failed to open: %s", err)
-	}
-
-	Execute(source)
+	cmd.Execute()
 }

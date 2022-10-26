@@ -1,4 +1,4 @@
-package main
+package parser
 
 import (
 	"bytes"
@@ -51,7 +51,7 @@ func generate(data models.Rsl) ([]byte, error) {
 
 	structList := data.Structs
 
-	tmpl, err := template.ParseFiles("rx.tmpl")
+	tmpl, err := template.ParseFiles("../templates/struct.tmpl")
 	if err != nil {
 		log.Fatalf("Could not parse struct template: %v\n", err)
 	}
