@@ -1,0 +1,17 @@
+package main
+
+{{range .}}
+        type {{.Name}} struct  {
+        {{range .Fields}}
+            {{.Name}} {{.Type}}
+                    {{if .Tags}}
+                        `"{{range .Tags}}
+                            {{.}}
+                        {{end}}"`
+                    {{end}}
+        {{end}}
+
+
+        }
+{{end}}
+

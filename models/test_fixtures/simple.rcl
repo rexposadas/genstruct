@@ -1,0 +1,6 @@
+[Person]
+    Name:string:required|json:name,omitempty
+    Age:int
+
+[Address]
+    Street:string:required
